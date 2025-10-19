@@ -5,12 +5,12 @@ type Props = {
   params: { id: string }
 }
 
-function BlogPostPage({ params }: Props) {
+export const dynamic = 'force-dynamic' // 🚀 IMPORTANT FIX
+
+export default function BlogPostPage({ params }: Props) {
   return (
     <div>
       <BlogPost id={params.id} />
     </div>
   )
 }
-
-export default BlogPostPage
